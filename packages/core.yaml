@@ -97,6 +97,8 @@ uart:
   stop_bits: 1
   rx_pin: ${uart_rx}
   tx_pin: ${uart_tx}
+  debug:
+    direction: ${uart_debug_dir}
 
 api:
   encryption:
@@ -113,6 +115,7 @@ wifi:
   ap:
     ssid: "${device_name} Fallback Hotspot"
     password: "${recovery_pass}"
+    use_address: "${wifi_ip}"
 
 captive_portal:
 
