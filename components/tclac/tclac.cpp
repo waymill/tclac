@@ -79,9 +79,9 @@ void tclacClimate::loop()  {
 
 		byte check = getChecksum(dataRX, sizeof(dataRX));
 
-		raw = getHex(dataRX, sizeof(dataRX));
+		//raw = getHex(dataRX, sizeof(dataRX));
 		
-		ESP_LOGD("TCL", "RX full : %s ", raw.c_str());
+		//ESP_LOGD("TCL", "RX full : %s ", raw.c_str());
 		
 		// Проверяем контрольную сумму
 		if (check != dataRX[60]) {
@@ -89,7 +89,7 @@ void tclacClimate::loop()  {
 			tclacClimate::dataShow(0,0);
 			return;
 		} else {
-			ESP_LOGD("TCL", "checksum OK %x", check);
+			//ESP_LOGD("TCL", "checksum OK %x", check);
 		}
 		tclacClimate::dataShow(0,0);
 		// Прочитав все из буфера приступаем к разбору данных
