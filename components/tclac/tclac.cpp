@@ -89,7 +89,7 @@ void tclacClimate::loop()  {
 			tclacClimate::dataShow(0,0);
 			return;
 		} else {
-			//ESP_LOGD("TCL", "checksum OK %x", check);
+			ESP_LOGD("TCL", "checksum OK %x", check);
 		}
 		tclacClimate::dataShow(0,0);
 		// Прочитав все из буфера приступаем к разбору данных
