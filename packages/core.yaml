@@ -125,10 +125,9 @@ captive_portal:
 # # # # # # # # # # # # # # # # # # # # # # #
 
 # ОБЯЗАТЕЛЬНО отключаем логгирование через UART
-logger:
-  baud_rate: 0
-  level: DEBUG
-
+#logger:
+#  baud_rate: 0
+  
 # Раздел настроек устройства:
 # - Переключатели
 switch:
