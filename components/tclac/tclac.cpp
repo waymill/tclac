@@ -109,8 +109,9 @@ void tclacClimate::update() {
 void tclacClimate::readData() {
 	
 	current_temperature = float((( (dataRX[17] << 8) | dataRX[18] ) / 374 - 32)/1.8);
-	current_voltage	= float(dataRX[17]);
-	current_current	= float(dataRX[45]);
+
+	voltage	= int(dataRX[17]);
+	current	= float(dataRX[45]);
 
 	target_temperature = (dataRX[FAN_SPEED_POS] & SET_TEMP_MASK) + 16;
 

@@ -104,6 +104,9 @@ class tclacClimate : public climate::Climate, public esphome::uart::UARTDevice, 
 		int target_temperature_set = 0;
 		uint8_t switch_climate_mode = 0;
 		bool allow_take_control = false;
+
+        int voltage = 0;
+		float current = 0.0;
 		
 		esphome::climate::ClimateTraits traits_;
 		
